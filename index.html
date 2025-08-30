@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OWASP ZAP Security Scanner & Cybersecurity Resources</title>
+    <title>OWASP ZAP Security Scanner</title>
     <style>
         * {
             margin: 0;
@@ -12,10 +12,9 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #e4e4e7;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -24,136 +23,155 @@
         }
         
         .container {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            max-width: 800px;
+            max-width: 600px;
             width: 100%;
             text-align: center;
         }
         
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+            border-radius: 20px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+        }
+        
         h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
             font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .subtitle {
-            color: #7f8c8d;
-            margin-bottom: 40px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            color: #a1a1aa;
+            margin-bottom: 50px;
+            line-height: 1.6;
         }
         
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-        
-        .card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            border-left: 5px solid #3498db;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        
-        .card h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .card p {
-            color: #555;
-            margin-bottom: 20px;
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         .btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            color: white;
-            padding: 12px 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: #18181b;
+            border: 1px solid #27272a;
+            color: #e4e4e7;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.3s ease;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 180px;
         }
         
         .btn:hover {
-            background: linear-gradient(45deg, #2980b9, #1f618d);
+            background: #27272a;
+            border-color: #3f3f46;
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
         
-        .btn.secondary {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
         }
         
-        .btn.secondary:hover {
-            background: linear-gradient(45deg, #c0392b, #a93226);
+        .btn:hover:before {
+            left: 100%;
         }
         
-        .emoji {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            display: block;
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            border: 1px solid #8b5cf6;
+            color: #ffffff;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            border-color: #7c3aed;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+        }
+        
+        .icon {
+            font-size: 1.2rem;
         }
         
         .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #ecf0f1;
-            color: #7f8c8d;
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #27272a;
+            color: #71717a;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🛡️ OWASP ZAP Security Scanner</h1>
-        <p class="subtitle">Cybersecurity Testing Tools & Educational Resources</p>
+        <div class="logo">CS</div>
         
-        <div class="cards">
-            <div class="card">
-                <span class="emoji">📊</span>
-                <h3>Cybersecurity 101 Presentation</h3>
-                <p>Comprehensive presentation covering cybersecurity fundamentals and OWASP Top 10 vulnerabilities</p>
-                <a href="cybersecurity_101_owasp10_presentation.html" class="btn">View Presentation</a>
-            </div>
-            
-            <div class="card">
-                <span class="emoji">🔍</span>
-                <h3>ZAP Security Scanner</h3>
-                <p>Docker-based setup for running OWASP ZAP scans on web applications with automated reporting</p>
-                <a href="README.md" class="btn secondary">View Documentation</a>
-            </div>
-        </div>
+        <h1>Cybersecurity 101++</h1>
+        <p class="subtitle">
+            Essential cybersecurity learning materials and hands-on guides<br>
+            featuring OWASP Top 10 fundamentals and ZAP security testing toolkit
+        </p>
         
-        <div class="cards">
-            <div class="card">
-                <span class="emoji">🧪</span>
-                <h3>Juice Shop Testing</h3>
-                <p>Ready-to-use Docker Compose setup for testing ZAP against the vulnerable Juice Shop application</p>
-                <a href="docker-compose-juiceshop.yml" class="btn">View Config</a>
-            </div>
+        <div class="buttons">
+            <a href="cybersecurity_101_owasp10_presentation.html" class="btn btn-primary">
+                <span class="icon">📊</span>
+                View Presentation
+            </a>
             
-            <div class="card">
-                <span class="emoji">🌐</span>
-                <h3>External Website Scanning</h3>
-                <p>Flexible configuration for scanning any external website with customizable scan parameters</p>
-                <a href="run-zap-scan.sh" class="btn">View Script</a>
-            </div>
+            <a href="README.md" class="btn">
+                <span class="icon">📖</span>
+                View Documentation
+            </a>
         </div>
         
         <div class="footer">
-            <p>🚀 Built for cybersecurity education and web application security testing</p>
-            <p>⚠️ Always ensure you have permission before scanning external websites</p>
+            <p>Built for cybersecurity education and web application security testing</p>
         </div>
     </div>
 </body>
