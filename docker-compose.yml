@@ -1,0 +1,23 @@
+services:
+  zap:
+    image: ghcr.io/zaproxy/zaproxy:stable
+    container_name: zap-scanner
+    user: root
+    volumes:
+      - ./zap-reports:/zap/wrk/reports
+    environment:
+      - TARGET_URL=${TARGET_URL:-https://example.com}
+      - SCAN_TYPE=${SCAN_TYPE:-baseline}
+    command: 
+      - bash
+      - -c
+      - |
+        echo "Target URL: $TARGET_URL"
+        echo "Scan Type: $SCAN_TYPE"
+        echo "Starting ZAP $SCAN_TYPE scan..."
+        if [ "$SCAN_TYPE" = "full" ]; then
+          zap-full-scan.py -t "$TARGET_URL" -r /zap/wrk/reports/zap-report.html -w /zap/wrk/reports/zap-report.md -J /zap/wrk/reports/zap-report.json -l INFO
+        else
+          zap-baseline.py -t "$TARGET_URL" -r /zap/wrk/reports/zap-report.html -w /zap/wrk/reports/zap-report.md -J /zap/wrk/reports/zap-report.json -l INFO
+        fi
+        echo "Scan completed. Reports generated in ./zap-reports/"

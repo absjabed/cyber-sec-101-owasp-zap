@@ -1,0 +1,23 @@
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    container_name: juice-shop
+    ports:
+      - "3000:3000"
+
+  zap:
+    image: ghcr.io/zaproxy/zaproxy:stable
+    container_name: zap
+    user: root
+    depends_on:
+      - juice-shop
+    volumes:
+      - ./zap-reports:/zap/wrk/reports
+    command: > #zap-baseline.py
+      bash -c "
+      echo 'Waiting for Juice Shop to be ready...';
+      sleep 60;
+      echo 'Starting ZAP scan...';
+      zap-full-scan.py -t http://juice-shop:3000 -r /zap/wrk/reports/zap-report.html -w /zap/wrk/reports/zap-report.md -J /zap/wrk/reports/zap-report.json -l INFO;
+      echo 'Scan completed. Reports generated.';
+      "
