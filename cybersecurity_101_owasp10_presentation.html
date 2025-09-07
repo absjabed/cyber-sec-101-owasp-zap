@@ -721,6 +721,119 @@
             margin-top: 0;
             font-size: 24px;
         }
+
+        .ai-categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .ai-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 182, 212, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 25px;
+            border-radius: 12px;
+            transition: transform 0.2s ease;
+        }
+        
+        .ai-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+        }
+        
+        .ai-title {
+            color: #3b82f6;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .ai-icon {
+            font-size: 24px;
+        }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .developer-benefits {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #1f2937;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .tool-card {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .tool-name {
+            color: #8b5cf6;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-left: 5px solid #ef4444;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+        }
     </style>
 </head>
 <body>
@@ -2649,11 +2762,173 @@ public async Task&lt;IActionResult&gt; GetUser(string id)
             </ul>
         </div>
 
+        <div class="slide">
+        <div class="slide-header">
+            <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
+            <div class="slide-number">28</div>
+        </div>
+        
+        <h1>AI in Cybersecurity: Current State 2025</h1>
+        <h2>"The AI Arms Race - Defense vs. Attack"</h2>
+        
+        <div class="stats-row">
+            <div class="stat-box">
+                <span class="stat-number">93%</span>
+                Security leaders expect daily AI attacks in 2025
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">66%</span>
+                Organizations say AI will have the biggest cybersecurity impact
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">3x</span>
+                Faster vulnerability fixing with AI tools
+            </div>
+        </div>
+        
+        <h2>Where AI is Being Used in Cybersecurity</h2>
+        
+        <div class="ai-categories">
+            <div class="ai-card">
+                <div class="ai-title">
+                    <span class="ai-icon">🔍</span>
+                    Threat Detection & Response
+                </div>
+                <ul>
+                    <li><strong>Real-time anomaly detection</strong> - analyzing network patterns at machine speed</li>
+                    <li><strong>Automated incident response</strong> - containment and mitigation without human delay</li>
+                    <li><strong>AI-powered SOCs</strong> - autonomous security operations centers</li>
+                    <li><strong>Predictive threat hunting</strong> - finding threats before they activate</li>
+                </ul>
+            </div>
+            
+            <div class="ai-card">
+                <div class="ai-title">
+                    <span class="ai-icon">💻</span>
+                    Application Security & Development
+                </div>
+                <ul>
+                    <li><strong>Automated code scanning</strong> - GitHub Copilot Autofix, CodeQL</li>
+                    <li><strong>Intelligent vulnerability assessment</strong> - context-aware security testing</li>
+                    <li><strong>AI coding agents</strong> - security-aware code generation</li>
+                    <li><strong>Real-time code review</strong> - security feedback during development</li>
+                </ul>
+            </div>
+            
+            <div class="ai-card">
+                <div class="ai-title">
+                    <span class="ai-icon">🤖</span>
+                    Autonomous Security Operations
+                </div>
+                <ul>
+                    <li><strong>AI security analysts</strong> - automated investigation and triage</li>
+                    <li><strong>Machine-vs-machine warfare</strong> - AI defending against AI attacks</li>
+                    <li><strong>Adaptive defense systems</strong> - learning from attack patterns</li>
+                    <li><strong>Intelligent orchestration</strong> - coordinating security tools automatically</li>
+                </ul>
+            </div>
+            
+            <div class="ai-card">
+                <div class="ai-title">
+                    <span class="ai-icon">📊</span>
+                    Risk Assessment & Compliance
+                </div>
+                <ul>
+                    <li><strong>Continuous risk scoring</strong> - dynamic risk assessment</li>
+                    <li><strong>Automated compliance monitoring</strong> - real-time regulatory adherence</li>
+                    <li><strong>Intelligent threat modeling</strong> - AI-driven architecture analysis</li>
+                    <li><strong>Predictive vulnerability management</strong> - prioritizing based on exploit likelihood</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>How Developers Can Benefit from AI Advancements</h2>
+        
+        <div class="developer-benefits">
+            <h3 style="color: #10b981; margin-top: 0;">Immediate Benefits for Developers:</h3>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-name">GitHub Copilot Security Features</div>
+                    <ul style="margin: 8px 0; color: #a7f3d0; font-size: 14px;">
+                        <li>Autofix: 3x faster vulnerability remediation</li>
+                        <li>Secret scanning with push protection</li>
+                        <li>Security-aware code suggestions</li>
+                        <li>Automated pull request security reviews</li>
+                    </ul>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-name">AI-Powered Security Testing</div>
+                    <ul style="margin: 8px 0; color: #a7f3d0; font-size: 14px;">
+                        <li>Intelligent fuzzing and penetration testing</li>
+                        <li>Automated security regression testing</li>
+                        <li>Context-aware vulnerability scanning</li>
+                        <li>AI-generated security test cases</li>
+                    </ul>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-name">Development Workflow Integration</div>
+                    <ul style="margin: 8px 0; color: #a7f3d0; font-size: 14px;">
+                        <li>Security-first coding agents and assistants</li>
+                        <li>Automated dependency vulnerability management</li>
+                        <li>Real-time security coaching and education</li>
+                        <li>Intelligent security policy enforcement</li>
+                    </ul>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-name">Career & Skill Development</div>
+                    <ul style="margin: 8px 0; color: #a7f3d0; font-size: 14px;">
+                        <li>AI tutors for security concepts and practices</li>
+                        <li>Personalized learning paths for secure coding</li>
+                        <li>Automated security knowledge validation</li>
+                        <li>Emerging roles: AI Security Engineer, Prompt Security</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="warning-box">
+            <h3 style="color: #fca5a5; margin-top: 0;">The Double-Edged Sword:</h3>
+            <p style="color: #fcd8d8; margin: 0;">
+                <strong>AI-Powered Attacks:</strong> Attackers use AI for sophisticated phishing, automated exploit generation, 
+                deepfakes, and adaptive malware that evolves in real-time. <strong>Shadow AI</strong> in enterprises 
+                creates new attack surfaces through unsanctioned AI model usage.
+            </p>
+        </div>
+        
+        <div class="highlight-box">
+            <div style="font-size: 24px; margin-bottom: 10px;">🚀 The Future is Now</div>
+            AI transforms cybersecurity from reactive to predictive - developers who embrace AI-powered security tools today will build the most secure applications tomorrow
+        </div>
+        
+        <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); padding: 20px; border-radius: 12px; margin-top: 25px;">
+            <h3 style="color: #06b6d4; margin-top: 0;">Key Trends Shaping 2025:</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <ul style="margin: 0; color: #a7f3d0; font-size: 16px;">
+                        <li><strong>Unified AI Platforms:</strong> Single solutions replacing fragmented security tools</li>
+                        <li><strong>Agentic AI:</strong> Autonomous agents handling complex security workflows</li>
+                        <li><strong>Quantum-Safe Cryptography:</strong> Preparing for post-quantum threats</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul style="margin: 0; color: #a7f3d0; font-size: 16px;">
+                        <li><strong>xOps Convergence:</strong> DevSecOps + DataOps + ModelOps integration</li>
+                        <li><strong>Real-time Code Security:</strong> Security feedback as you type</li>
+                        <li><strong>AI Ethics & Governance:</strong> Responsible AI security frameworks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <!-- Slide 28: Real-World Breach Stories -->
         <div class="slide">
             <div class="slide-header">
                 <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
-                <div class="slide-number">28</div>
+                <div class="slide-number">29</div>
             </div>
             <h1>Learning from Real Breaches</h1>
             <h2>"When Security Goes Wrong"</h2>
@@ -2709,170 +2984,10 @@ public async Task&lt;IActionResult&gt; GetUser(string id)
             </div>
         </div>
 
-        <!-- Slide 29: Action Items -->
-        <div class="slide">
-            <div class="slide-header">
-                <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
-                <div class="slide-number">29</div>
-            </div>
-            <h1>Your Security Journey Starts Now!</h1>
-            <h2 style="text-align: center;">"From Awareness to Action"</h2>
-            
-            <div class="two-column">
-                <div>
-                    <h3>🎯 Key Takeaways</h3>
-                    <ol style="font-size: 18px; line-height: 1.8;">
-                        <li><strong>Security is not optional</strong> - it's part of professional development</li>
-                        <li><strong>OWASP Top 10</strong> provides a practical roadmap</li>
-                        <li><strong>Small changes have big impact</strong> - validation and updates prevent most attacks</li>
-                        <li><strong>Automation is your friend</strong> - integrate security into CI/CD</li>
-                        <li><strong>Learning never stops</strong> - threats evolve, so must your knowledge</li>
-                    </ol>
-
-                    <h3>📅 30-60-90 Day Plan</h3>
-                    <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.2);">
-                        <p><strong>30 Days:</strong> Input validation, dependency scanning, logging, team guidelines</p>
-                        <p><strong>60 Days:</strong> OWASP ZAP integration, security code reviews, secret management, team training</p>
-                        <p><strong>90 Days:</strong> Security assessment, monitoring/alerting, incident response procedures</p>
-                    </div>
-                </div>
-                <div>
-                    <h3>✅ Immediate Action Items (Do This Week!)</h3>
-                    <div class="checklist">
-                        <ul>
-                            <li>Run npm audit or dotnet vulnerability check</li>
-                            <li>Enable GitHub security alerts and Dependabot</li>
-                            <li>Add HTTPS redirect if not implemented</li>
-                            <li>Review authentication/authorization in APIs</li>
-                            <li>Add basic input validation to forms</li>
-                            <li>Add security check to CI/CD pipeline</li>
-                            <li>Schedule monthly dependency reviews</li>
-                            <li>Share this training with your team</li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 20px; border-radius: 10px; text-align: center; margin-top: 20px;">
-                        <h3>🚀 Remember: Progress > Perfection</h3>
-                        <p style="margin: 0;">Focus on consistent improvement over perfect security</p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 30px; border-radius: 15px; margin-top: 30px;">
-                <h2>📞 Questions? Keep Learning!</h2>
-                <p style="font-size: 20px; margin: 10px 0;">Security is a journey, not a destination.</p>
-                <p style="font-size: 18px; margin: 0;"><strong>Thank you for your attention! Let's make the web more secure, one line of code at a time.</strong></p>
-            </div>
-        </div>
-
-        <!-- Slide 30: Q&A Reference -->
-        <div class="slide">
-            <div class="slide-header">
-                <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
-                <div class="slide-number">30</div>
-            </div>
-            <h1>Q&A Quick Reference</h1>
-            <h2>"Common Questions & Expert Answers"</h2>
-            
-            <div style="font-size: 16px;">
-                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
-                    <p><strong>Q: "How do I convince my manager to invest time in security?"</strong></p>
-                    <p><strong>A:</strong> Focus on business impact: $4.45M average breach cost, 10x more expensive to fix in production, customer trust, regulatory compliance requirements.</p>
-                </div>
-                
-                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
-                    <p><strong>Q: "Which security tools should I start with?"</strong></p>
-                    <p><strong>A:</strong> Essential starter kit: SonarQube/ESLint Security (static), npm audit/.NET vulnerability check (dependencies), OWASP ZAP (dynamic), environment variables for secrets.</p>
-                </div>
-                
-                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
-                    <p><strong>Q: "How much security testing is enough?"</strong></p>
-                    <p><strong>A:</strong> Follow the pyramid: Many automated unit tests with security assertions, some integration tests, few manual security reviews. Think "continuous security" not "security gate."</p>
-                </div>
-                
-                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
-                    <p><strong>Q: "What if I find a vulnerability in production?"</strong></p>
-                    <p><strong>A:</strong> Don't panic but act quickly: 1) Assess scope 2) Contain immediately 3) Document everything 4) Communicate appropriately 5) Post-incident review.</p>
-                </div>
-                
-                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
-                    <p><strong>Q: "Should I build my own authentication system?"</strong></p>
-                    <p><strong>A:</strong> Generally no. Use proven solutions: Auth0, AWS Cognito, Azure AD. If you must build custom, use established frameworks (ASP.NET Identity, Passport.js). Never roll your own crypto.</p>
-                </div>
-            </div>
-
-            <h3>📚 Essential Resources</h3>
-            <ul style="columns: 2; column-gap: 30px; font-size: 16px;">
-                <li><strong>OWASP Top 10:</strong> https://owasp.org/www-project-top-ten/</li>
-                <li><strong>OWASP Cheat Sheets:</strong> https://cheatsheetseries.owasp.org/</li>
-                <li><strong>Security Headers Test:</strong> https://securityheaders.com/</li>
-                <li><strong>PortSwigger Web Security Academy:</strong> Free hands-on training</li>
-                <li><strong>OWASP WebGoat:</strong> Practice environment</li>
-                <li><strong>Have I Been Pwned:</strong> Check for breached passwords</li>
-            </ul>
-        </div>
-
-        <!-- Slide 31: OWASP Top 10 Report (ZAP Tool) -->
-        <div class="slide">
-            <div class="slide-header">
-                <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
-                <div class="slide-number">31</div>
-            </div>
-            <h1>OWASP Top 10 Report</h1>
-            <h2>"Powered by OWASP ZAP Tool"</h2>
-            
-            <div style="text-align: center; margin: 50px 0;">
-                <div style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 40px; border-radius: 16px; box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);">
-                    <h3 style="margin-top: 0; font-size: 32px;">Live Security Assessment</h3>
-                    <p style="font-size: 20px; margin: 20px 0;">We will now demonstrate a real-time OWASP ZAP security scan</p>
-                    <p style="font-size: 18px; color: #cbd5e1;">Scanning target application for OWASP Top 10 vulnerabilities...</p>
-                </div>
-            </div>
-            
-            <div class="two-column">
-                <div>
-                    <h3>🔍 What We'll Scan For:</h3>
-                    <ul style="font-size: 18px; line-height: 1.8;">
-                        <li>SQL Injection vulnerabilities</li>
-                        <li>Cross-Site Scripting (XSS)</li>
-                        <li>Authentication bypass attempts</li>
-                        <li>Access control failures</li>
-                        <li>Security misconfigurations</li>
-                        <li>Vulnerable components</li>
-                        <li>Missing security headers</li>
-                        <li>HTTPS/TLS configuration</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>📊 Report Contents:</h3>
-                    <ul style="font-size: 18px; line-height: 1.8;">
-                        <li>Vulnerability severity rankings</li>
-                        <li>Detailed findings with evidence</li>
-                        <li>Remediation recommendations</li>
-                        <li>OWASP Top 10 mapping</li>
-                        <li>Risk assessment summary</li>
-                        <li>Technical details for developers</li>
-                        <li>Executive summary for management</li>
-                        <li>Next steps and action items</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="highlight-box">
-                <h3 style="margin-top: 0;">⚡ Live Demo Time!</h3>
-                <p style="margin: 0; font-size: 20px;">Let's see how these vulnerabilities look in practice</p>
-            </div>
-            
-            <div style="background: rgba(139, 92, 246, 0.1); padding: 20px; border-radius: 12px; margin-top: 30px; border: 1px solid rgba(139, 92, 246, 0.2);">
-                <h4 style="color: #8b5cf6; margin-top: 0;">Note for Presentation:</h4>
-                <p style="margin: 0;">This slide serves as a transition to the live ZAP scanning demonstration. The actual report will be generated during the presentation and can be shared with attendees afterward.</p>
-            </div>
-        </div>
-
         <div class="slide">
         <div class="slide-header">
             <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
-            <div class="slide-number">32</div>
+            <div class="slide-number">30</div>
         </div>
         
         <h1>Compliance Frameworks & Industry Standards</h1>
@@ -2997,10 +3112,164 @@ public async Task&lt;IActionResult&gt; GetUser(string id)
         </div>
     </div>
 
+        <!-- Slide 29: Action Items -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
+                <div class="slide-number">31</div>
+            </div>
+            <h1>Your Security Journey Starts Now!</h1>
+            <h2 style="text-align: center;">"From Awareness to Action"</h2>
+            
+            <div class="two-column">
+                <div>
+                    <h3>🎯 Key Takeaways</h3>
+                    <ol style="font-size: 18px; line-height: 1.8;">
+                        <li><strong>Security is not optional</strong> - it's part of professional development</li>
+                        <li><strong>OWASP Top 10</strong> provides a practical roadmap</li>
+                        <li><strong>Small changes have big impact</strong> - validation and updates prevent most attacks</li>
+                        <li><strong>Automation is your friend</strong> - integrate security into CI/CD</li>
+                        <li><strong>Learning never stops</strong> - threats evolve, so must your knowledge</li>
+                    </ol>
+
+                    <h3>📅 30-60-90 Day Plan</h3>
+                    <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.2);">
+                        <p><strong>30 Days:</strong> Input validation, dependency scanning, logging, team guidelines</p>
+                        <p><strong>60 Days:</strong> OWASP ZAP integration, security code reviews, secret management, team training</p>
+                        <p><strong>90 Days:</strong> Security assessment, monitoring/alerting, incident response procedures</p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 20px; border-radius: 10px; text-align: center; margin-top: 20px;">
+                        <h3>🚀 Remember: Progress > Perfection</h3>
+                        <p style="margin: 0;">Focus on consistent improvement over perfect security</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>✅ Immediate Action Items (Do This Week!)</h3>
+                    <div class="checklist">
+                        <ul>
+                            <li>Run npm audit or dotnet vulnerability check</li>
+                            <li>Enable GitHub security alerts and Dependabot</li>
+                            <li>Add HTTPS redirect if not implemented</li>
+                            <li>Review authentication/authorization in APIs</li>
+                            <li>Add basic input validation to forms</li>
+                            <li>Add security check to CI/CD pipeline</li>
+                            <li>Schedule monthly dependency reviews</li>
+                            <li>Share this training with your team</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 30: Q&A Reference -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
+                <div class="slide-number">32</div>
+            </div>
+            <h1>Q&A Quick Reference</h1>
+            <h2>"Common Questions & Expert Answers"</h2>
+            
+            <div style="font-size: 16px;">
+                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
+                    <p><strong>Q: "How do I convince my manager to invest time in security?"</strong></p>
+                    <p><strong>A:</strong> Focus on business impact: $4.45M average breach cost, 10x more expensive to fix in production, customer trust, regulatory compliance requirements.</p>
+                </div>
+                
+                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
+                    <p><strong>Q: "Which security tools should I start with?"</strong></p>
+                    <p><strong>A:</strong> Essential starter kit: SonarQube/ESLint Security (static), npm audit/.NET vulnerability check (dependencies), OWASP ZAP (dynamic), environment variables for secrets.</p>
+                </div>
+                
+                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
+                    <p><strong>Q: "How much security testing is enough?"</strong></p>
+                    <p><strong>A:</strong> Follow the pyramid: Many automated unit tests with security assertions, some integration tests, few manual security reviews. Think "continuous security" not "security gate."</p>
+                </div>
+                
+                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
+                    <p><strong>Q: "What if I find a vulnerability in production?"</strong></p>
+                    <p><strong>A:</strong> Don't panic but act quickly: 1) Assess scope 2) Contain immediately 3) Document everything 4) Communicate appropriately 5) Post-incident review.</p>
+                </div>
+                
+                <div style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 5px solid #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2);">
+                    <p><strong>Q: "Should I build my own authentication system?"</strong></p>
+                    <p><strong>A:</strong> Generally no. Use proven solutions: Auth0, AWS Cognito, Azure AD. If you must build custom, use established frameworks (ASP.NET Identity, Passport.js). Never roll your own crypto.</p>
+                </div>
+            </div>
+
+            <h3>📚 Essential Resources</h3>
+            <ul style="columns: 2; column-gap: 30px; font-size: 16px;">
+                <li><strong>OWASP Top 10:</strong> https://owasp.org/www-project-top-ten/</li>
+                <li><strong>OWASP Cheat Sheets:</strong> https://cheatsheetseries.owasp.org/</li>
+                <li><strong>Security Headers Test:</strong> https://securityheaders.com/</li>
+                <li><strong>PortSwigger Web Security Academy:</strong> Free hands-on training</li>
+                <li><strong>OWASP WebGoat:</strong> Practice environment</li>
+                <li><strong>Have I Been Pwned:</strong> Check for breached passwords</li>
+            </ul>
+        </div>
+
+        <!-- Slide 31: OWASP Top 10 Report (ZAP Tool) -->
+        <div class="slide">
+            <div class="slide-header">
+                <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
+                <div class="slide-number">33</div>
+            </div>
+            <h1>OWASP Top 10 Report</h1>
+            <h2>"Powered by OWASP ZAP Tool"</h2>
+            
+            <div style="text-align: center; margin: 50px 0;">
+                <div style="background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 40px; border-radius: 16px; box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);">
+                    <h3 style="margin-top: 0; font-size: 32px;">Live Security Assessment</h3>
+                    <p style="font-size: 20px; margin: 20px 0;">We will now demonstrate a real-time OWASP ZAP security scan</p>
+                    <p style="font-size: 18px; color: #cbd5e1;">Scanning target application for OWASP Top 10 vulnerabilities...</p>
+                </div>
+            </div>
+            
+            <div class="two-column">
+                <div>
+                    <h3>🔍 What We'll Scan For:</h3>
+                    <ul style="font-size: 18px; line-height: 1.8;">
+                        <li>SQL Injection vulnerabilities</li>
+                        <li>Cross-Site Scripting (XSS)</li>
+                        <li>Authentication bypass attempts</li>
+                        <li>Access control failures</li>
+                        <li>Security misconfigurations</li>
+                        <li>Vulnerable components</li>
+                        <li>Missing security headers</li>
+                        <li>HTTPS/TLS configuration</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>📊 Report Contents:</h3>
+                    <ul style="font-size: 18px; line-height: 1.8;">
+                        <li>Vulnerability severity rankings</li>
+                        <li>Detailed findings with evidence</li>
+                        <li>Remediation recommendations</li>
+                        <li>OWASP Top 10 mapping</li>
+                        <li>Risk assessment summary</li>
+                        <li>Technical details for developers</li>
+                        <li>Executive summary for management</li>
+                        <li>Next steps and action items</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3 style="margin-top: 0;">⚡ Live Demo Time!</h3>
+                <p style="margin: 0; font-size: 20px;">Let's see how these vulnerabilities look in practice</p>
+            </div>
+            
+            <div style="background: rgba(139, 92, 246, 0.1); padding: 20px; border-radius: 12px; margin-top: 30px; border: 1px solid rgba(139, 92, 246, 0.2);">
+                <h4 style="color: #8b5cf6; margin-top: 0;">Note for Presentation:</h4>
+                <p style="margin: 0;">This slide serves as a transition to the live ZAP scanning demonstration. The actual report will be generated during the presentation and can be shared with attendees afterward.</p>
+            </div>
+        </div>
+
         <div class="slide">
         <div class="slide-header">
             <img src="https://ait.inc/wp-content/uploads/2025/01/AIT-new-logo-1024x434.png" alt="AIT Logo" class="logo">
-            <div class="slide-number">33</div>
+            <div class="slide-number">34</div>
         </div>
         
         <div class="thank-you-content">
